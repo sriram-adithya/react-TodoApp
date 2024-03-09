@@ -17,12 +17,11 @@ const App: React.FC = () => {
     }
   };
 
-  console.log(todos);
-
   return (
     <div className="App">
       <span className="heading">TODO APP</span>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
+      { todos && todos.length===0 ?<span className="place-holder"> Add an item </span>: ""}
       <TodoList todos={todos} setTodos={setTodos} />
     </div>
   );
